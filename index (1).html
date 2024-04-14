@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta property="og:site_name" content="StellarSphere">
+  <meta name="description" content="My personal gift redeeming website. Made by @mintcrystal_450 on Instagram">
+  <meta name="author" content="FrostBite">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/drive-viewer/AKGpihaky1RVWiLVDIXGkffx-qvnF7SBT5N8QZcvS-B5809LWBU9j68Zrx-eZHsJLcn_5w9AyrKDEGvoST7OBNhG6mfXCdoO9XLAxA=s2560" sizes="512x512">
+  <meta charset="UTF-8">
+  <meta property="og:image" content="https://lh3.googleusercontent.com/drive-viewer/AKGpihaky1RVWiLVDIXGkffx-qvnF7SBT5N8QZcvS-B5809LWBU9j68Zrx-eZHsJLcn_5w9AyrKDEGvoST7OBNhG6mfXCdoO9XLAxA=s2560">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+    height: 100vh;
+    transition: background 200ms ease;
+    display: flex;
+    justify-content: center; /* Added for vertical centering */
+    align-items: center; /* Added for vertical centering */
+    min-height: 100vh; /* Added for vertical centering */
+  }
+  /*gradients*/
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  /*body sections*/
+  #giftCodeSection {
+    font-family: "Sacramento", cursive;
+    font-size: 650%;
+    display: block;
+  }
+  #tsftauto img, #smzauto img{
+    width: 100%;
+    height: auto;
+  }
+  #lover, #lover_mobile, #purpose, #purpose_mobile, #rare, #rare_mobile,  #tsftauto, #smzauto, #demo{
+    display: none;
+    align-items: left;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  /*other*/
+  .album-art {
+    flex: 0 0 200px;
+    margin-right: 20px;
+  }
+  .album-info {
+    flex: 1;
+    text-align: left;
+  }
+  .album-info h1, .album-info h2, .album-info ul {
+    margin: 0;
+    padding: 0;
+  }
+  .album-info ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .dload{
+    background-color: #fa4d88;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    margin-top:0;
+    margin-left:0;
+    color: white;
+    border-radius: 0.5rem;
+    border-width: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .va{
+    background-color: #fa4d88;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left:0;
+    margin-bottom: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+    border-width: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  /*redeem code*/
+  #codeInput{
+    padding-left: 10rem;
+    padding-top: 1rem;
+    padding-right: 10rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  .go{
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10%;
+    cursor: pointer;
+    background: #fafafa;
+  }
+  .go:hover{
+    background: #a0a0a0;
+    transition: background 200ms ease;
+  }
+@media only screen and (max-width: 600px){
+    .album-art-mobile{
+      flex: 0 0 200px;
+    }
+    #giftCodeSection {
+      font-family: sacramento;
+      font-size: 2rem;
+      display: block;
+    }
+    #codeInput{
+      padding-left: 5rem;
+      padding-top: 1rem;
+      padding-right: 5rem;
+      padding-bottom: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      font-style: italic;
+    }
+    .go{
+      padding-left: 1rem;
+      padding-top: 0.5rem;
+      padding-right: 1rem;
+      padding-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      background: #fafafa;
+    }
+   .album-art-mobile img{
+      width: 100%;
+      height: auto;
+   }
+    #lover_mobile, #purpose_mobile, #rare_mobile{
+      display: none;
+      align-items: center;
+      min-width: 80%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    #tsftauto, #smzauto{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    body {
+      background-size: 300% 300%;
+      animation: gradient 8s ease infinite;
+      overflow-x: hidden;
+    }
+    #demo{
+      min-width: 70%;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    #codeInput{
+      padding-left: 2rem;
+      padding-top: 1rem;
+      padding-right: 2rem;
+      padding-bottom: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      font-style: italic;
+    }
+    .va{
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+}
+  </style>
+  <title>StellarSphere</title>  
+</head>
+<body>
+  <div id="giftCodeSection">
+    <h1>StellarSphere</h1>
+    <input type="text" id="codeInput" placeholder="Enter gift code">
+    <button onclick="redeemCode()" class="go">Redeem</button>
+  </div>
+  
+  <!--Lover - Taylor Swift-->
+  <div id="lover">
+    <div class="album-art">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Taylor_Swift_-_Lover.png" alt="Album Art">
+        <br><br><br>
+        <a href="https://drive.google.com/uc?export=download&id=1bTNQ29uMO99tO_CJeQIyFLchb37YvNHh"><button class="dload"><center>Download</center></button></a>
+        <a href="https://drive.google.com/drive/folders/1-DUoXWAoSlV3EeUYXx-7m9AunIH735xW?usp=sharing"><button class="va"><center>View Album</center></button></a>
+    </div>
+    <div class="album-info">
+        <h1>Lover</h1>
+        <h2>Taylor Swift</h2>
+        <br>
+        <ol>
+            <li>I Forgot That You Existed</li>
+            <li>Cruel Summer</li>
+            <li>Lover</li>
+            <li>The Man</li>
+            <li>The Archer</li>
+            <li>I Think He Knows</li>
+            <li>Miss Americana & The Heartbreak Prince</li>
+            <li>Paper Rings</li>
+            <li>Cornelia Street</li>
+            <li>Death By A Thousand Cuts</li>
+            <li>London Boy</li>
+            <li>Soon You'll Get Better</li>
+            <li>False God</li>
+            <li>You Need To Calm Down</li>
+            <li>Afterglow</li>
+            <li>Me!</li>
+            <li>It's Nice To Have A Friend</li>
+            <li>Daylight</li>
+        </ol>
+    </div>
+  </div>
+  <div id="lover_mobile">
+    <div class="album-art-mobile">
+        <center><img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Taylor_Swift_-_Lover.png" alt="Album Art"></center><br>
+    </div>
+    <div class="album-info">
+        <h1>Lover</h1>
+        <h2>Taylor Swift</h2>
+        <br>
+        <ol>
+            <li>I Forgot That You Existed</li>
+            <li>Cruel Summer</li>
+            <li>Lover</li>
+            <li>The Man</li>
+            <li>The Archer</li>
+            <li>I Think He Knows</li>
+            <li>Miss Americana & The Heartbreak Prince</li>
+            <li>Paper Rings</li>
+            <li>Cornelia Street</li>
+            <li>Death By A Thousand Cuts</li>
+            <li>London Boy</li>
+            <li>Soon You'll Get Better</li>
+            <li>False God</li>
+            <li>You Need To Calm Down</li>
+            <li>Afterglow</li>
+            <li>Me!</li>
+            <li>It's Nice To Have A Friend</li>
+            <li>Daylight</li>
+        </ol>
+        <br>
+        <center><a href="https://drive.google.com/uc?export=download&id=1bTNQ29uMO99tO_CJeQIyFLchb37YvNHh"><button class="dload"><center>Download</center></button></a>
+        <a href="https://drive.google.com/drive/folders/1-DUoXWAoSlV3EeUYXx-7m9AunIH735xW?usp=sharing"><button class="va"><center>View Album</center></button></a></center>
+    </div>
+  </div>
+
+  <!--Purpose (Deluxe) - Justin Bieber-->
+  <div id="purpose">
+    <div class="album-art">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Justin_Bieber_-_Purpose_%28Official_Album_Cover%29.png" alt="Album Art">
+        <br><br><br>
+        <a href="https://drive.google.com/uc?export=download&id=1OkLO-jQHJGNfFbua3H1D6s0-SDpKEMge"><button class="dload"><center>Download</center></button></a>
+        <a href="https://drive.google.com/drive/folders/1wawj5xCVaQuUgOVmQa-jJAoj2Rnwwdbf?usp=sharing"><button class="va"><center>View Album</center></button></a>
+    </div>
+    <div class="album-info">
+        <h1>Purpose (Deluxe)</h1>
+        <h2>Justin Bieber</h2>
+        <br>
+        <ol>
+            <li>Mark My Words</li>
+            <li>I'll Show You</li>
+            <li>What Do You Mean?</li>
+            <li>Sorry</li>
+            <li>Love Yourself</li>
+            <li>Company</li>
+            <li>No Pressure</li>
+            <li>No Sense</li>
+            <li>The Feeling</li>
+            <li>Life Is Worth Living</li>
+            <li>Where Are Ü Now</li>
+            <li>Children</li>
+            <li>Purpose</li>
+            <li>Been You</li>
+            <li>Get Used To It</li>
+            <li>We Are</li>
+            <li>Trust</li>
+            <li>All In It</li>
+            <li>What Do You Mean? - Acoustic</li>
+        </ol>
+    </div>
+  </div>
+  <div id="purpose_mobile">
+    <div class="album-art-mobile">
+        <center><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Justin_Bieber_-_Purpose_%28Official_Album_Cover%29.png" alt="Album Art"></center><br>
+    </div>
+    <div class="album-info">
+        <h1>Purpose (Deluxe)</h1>
+        <h2>Justin Bieber</h2>
+        <br>
+        <ol>
+          <li>Mark My Words</li>
+          <li>I'll Show You</li>
+          <li>What Do You Mean?</li>
+          <li>Sorry</li>
+          <li>Love Yourself</li>
+          <li>Company</li>
+          <li>No Pressure</li>
+          <li>No Sense</li>
+          <li>The Feeling</li>
+          <li>Life Is Worth Living</li>
+          <li>Where Are Ü Now</li>
+          <li>Children</li>
+          <li>Purpose</li>
+          <li>Been You</li>
+          <li>Get Used To It</li>
+          <li>We Are</li>
+          <li>Trust</li>
+          <li>All In It</li>
+          <li>What Do You Mean? - Acoustic</li>
+        </ol>
+        <br>
+        <center><a href="https://drive.google.com/uc?export=download&id=1OkLO-jQHJGNfFbua3H1D6s0-SDpKEMge"><button class="dload"><center>Download</center></button></a>
+        <a href="https://drive.google.com/drive/folders/1wawj5xCVaQuUgOVmQa-jJAoj2Rnwwdbf?usp=sharing"><button class="va"><center>View Album</center></button></a></center>
+    </div>
+  </div>
+
+  <!--Rare (Deluxe) - Selena Gomez-->
+  <div id="rare">
+    <div class="album-art">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Selena_Gomez_-_Rare_%28Deluxe%29.png" alt="Album Art">
+        <br><br><br>
+        <a href="https://drive.google.com/uc?export=download&id=11Ajx8Olzdc2oPkMNVpfiR97o61Mks2fN"><button class="dload"><center>Download</center></button></a>
+        <a href="https://drive.google.com/drive/folders/1zAYrUK5zd0gZMImK4kZUb40brHVAJSk7?usp=sharing"><button class="va"><center>View Album</center></button></a>
+    </div>
+    <div class="album-info">
+        <h1>Rare (Deluxe)</h1>
+        <h2>Selena Gomez</h2>
+        <br>
+        <ol>
+            <li>Boyfriend</li>
+            <li>Lose You To Love Me</li>
+            <li>Rare</li>
+            <li>Souvenir</li>
+            <li>Look At Her Now</li>
+            <li>She</li>
+            <li>Crowded Room (ft. 6LACK)</li>
+            <li>Vulnerable</li>
+            <li>Dance Again</li>
+            <li>Ring</li>
+            <li>A Sweeter Place (ft. Kid Cudi)</li>
+            <li>People You Know</li>
+            <li>Cut You Off</li>
+            <li>Let Me Get Me</li>
+            <li>Kinda Crazy</li>
+            <li>Fun</li>
+            <li>Feel Me</li>
+        </ol>
+    </div>
+  </div>
+  <div id="rare_mobile">
+    <div class="album-art-mobile">
+        <center><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Selena_Gomez_-_Rare_%28Deluxe%29.png" alt="Album Art"></center><br>
+    </div>
+    <div class="album-info">
+        <h1>Rare (Deluxe)</h1>
+        <h2>Selena Gomez</h2>
+        <br>
+        <ol>
+          <li>Boyfriend</li>
+          <li>Lose You To Love Me</li>
+          <li>Rare</li>
+          <li>Souvenir</li>
+          <li>Look At Her Now</li>
+          <li>She</li>
+          <li>Crowded Room (ft. 6LACK)</li>
+          <li>Vulnerable</li>
+          <li>Dance Again</li>
+          <li>Ring</li>
+          <li>A Sweeter Place (ft. Kid Cudi)</li>
+          <li>People You Know</li>
+          <li>Cut You Off</li>
+          <li>Let Me Get Me</li>
+          <li>Kinda Crazy</li>
+          <li>Fun</li>
+          <li>Feel Me</li>
+        </ol>
+        <br>
+        <center><a href="https://drive.google.com/uc?export=download&id=11Ajx8Olzdc2oPkMNVpfiR97o61Mks2fN"><button class="dload"><center>Download</center></button></a>
+        <a href="https://drive.google.com/drive/folders/1zAYrUK5zd0gZMImK4kZUb40brHVAJSk7?usp=sharing"><button class="va"><center>View Album</center></button></a></center>
+    </div>
+  </div>
+
+  <!--Taylor Swift's Signature-->
+  <div id="tsftauto"><center>
+    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY4ZJiDfOnemW7kGaTe_G1iUuqzK5CpymyVd60neowChaaD_54NOl_EJTQHkVq4eDDbylF7bgTUsVInLvy9Xy05goyh49bD8yA=s1600-rw-v1">
+    <h1>Taylor Swift's Autograph</h1><br>
+    <a href="https://drive.google.com/uc?export=download&id=1UEB7W_3N0ElqpI7EmW_HsemeQEAdlc_7"><button class="dload"><center>Download</center></button></a></center>
+  </div>
+
+  <!--Selena Gomez's Signature-->
+  <div id="smzauto"><center>
+    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZFXt3E3vw5s-CvNQQTlYqj7lWo4vzBZu3D5L6O58iIXsI0M96o45WJQdo-urtK7VRGIVC0rJCzTwRzy48T5RsrZyaORfcetg=s1600-v0">
+    <h1>Selena Gomez's Autograph</h1><br>
+    <a href="https://drive.google.com/uc?export=download&id=115LYhKRyiIYcWJhot6WO2y906WYis5eb"><button class="dload"><center>Download</center></button></a></center>
+  </div>
+
+  <!--demo999 code list-->
+  <div id="demo">
+    <b>Lover</b>
+    <br>LVR-TSFT-9J6H-CDX
+    <br>MHP-QWSD-5FRT-VBN
+    <br>KJL-POIU-7HGF-RWE
+    <br>YTR-KJHG-3VBN-MXC
+    <br>PLM-NBVC-8KJH-QWE<br><br>
+    <b>Purpose (Deluxe)</b>
+    <br>DLX-JBBR-7C3P-CDX
+    <br>VTN-PLMK-2X9Q-GRF
+    <br>ZSX-KLPQ-5T6M-NHY
+    <br>RWQ-FGHJ-9VBN-XSW
+    <br>POI-UYTR-4WEC-VMN<br><br>
+    <b>Rare (Deluxe)</b>
+    <br>RAR-SLMG-5V6W-PQO
+    <br>FHD-KJPN-2B3Y-MXC
+    <br>GTR-PLHQ-8C9Z-ONY
+    <br>JKL-WQAF-4D5E-RST
+    <br>VBN-XCDR-1A2B-YUI<br><br><br><br>
+    <b>Taylor Swift's Autograph</b>
+    <br>SGN-TSFT-4A8W-DIG
+    <br>RTY-KJHG-2QWE-PLM
+    <br>BVC-XSWQ-9JNM-LOK
+    <br>MKL-QAZX-5PLK-NBV
+    <br>HGF-DXSC-7TGB-JUI<br><br>
+    <b>Selena Gomez's Autograph</b>
+    <br>SLG-AUTG-4R5T-NOP
+    <br>VBN-KJPH-9S8R-QWE
+    <br>PLM-CDRW-2Q1A-FGH
+    <br>HJI-MNBS-7X6C-YUI
+    <br>QWE-RXCD-3Z2V-LKJ
+  </div>
+
+  <script>
+    document.title = "StellarSphere";
+    function redeemCode() {
+    var enteredCode = document.getElementById("codeInput").value;
+     switch (enteredCode) {
+        case "LVR-TSFT-9J6H-CDX":
+        case "MHP-QWSD-5FRT-VBN":
+        case "KJL-POIU-7HGF-RWE":
+        case "YTR-KJHG-3VBN-MXC":
+        case "PLM-NBVC-8KJH-QWE":
+          document.getElementById("giftCodeSection").style.display = "none";
+            if (window.innerWidth <= 600) {
+              document.getElementById("lover_mobile").style.display = "block";
+            }
+            else {
+              document.getElementById("lover").style.display = "flex";
+            }
+          break;
+
+        case "DLX-JBBR-7C3P-CDX":
+        case "VTN-PLMK-2X9Q-GRF":
+        case "ZSX-KLPQ-5T6M-NHY":
+        case "RWQ-FGHJ-9VBN-XSW":
+        case "POI-UYTR-4WEC-VMN":
+          document.getElementById("giftCodeSection").style.display = "none";
+          if (window.innerWidth <= 600) {
+            document.getElementById("purpose_mobile").style.display = "block";
+          }
+          else {
+            document.getElementById("purpose").style.display = "flex";
+          }
+          break;
+
+        case "RAR-SLMG-5V6W-PQO":
+        case "FHD-KJPN-2B3Y-MXC":
+        case "GTR-PLHQ-8C9Z-ONY":
+        case "JKL-WQAF-4D5E-RST":
+        case "VBN-XCDR-1A2B-YUI":
+          document.getElementById("giftCodeSection").style.display = "none";
+          if (window.innerWidth <= 600) {
+            document.getElementById("rare_mobile").style.display = "block";
+          }
+          else {
+            document.getElementById("rare").style.display = "flex";
+          }
+          break;
+
+        case "SGN-TSFT-4A8W-DIG":
+        case "RTY-KJHG-2QWE-PLM":
+        case "BVC-XSWQ-9JNM-LOK":
+        case "MKL-QAZX-5PLK-NBV":
+        case "HGF-DXSC-7TGB-JUI":
+          document.getElementById("giftCodeSection").style.display = "none";
+          document.getElementById("tsftauto").style.display = "block";
+          break;
+
+        case "SLG-AUTG-4R5T-NOP":
+        case "VBN-KJPH-9S8R-QWE":
+        case "PLM-CDRW-2Q1A-FGH":
+        case "HJI-MNBS-7X6C-YUI":
+        case "QWE-RXCD-3Z2V-LKJ":
+          document.getElementById("giftCodeSection").style.display = "none";
+          document.getElementById("smzauto").style.display = "block";
+          break;
+
+        case "demo999":
+          document.getElementById("giftCodeSection").style.display = "none";
+          document.getElementById("demo").style.display = "block";
+          break;
+
+        default:
+          alert("Invalid gift code. Please try again.");
+      }
+}
+  </script>
+</body>
+</html>
